@@ -49,6 +49,12 @@
 # All that fills your head is the sounds of alarms, “containment breach proceed to the nearest exit. “ 
 # As you, slowly stand up you try to remember you name...
 
+# You walk down the hallway, 
+# “CONTAINMENT BREACH!!!please procced to the nearest exit
+# “Ugh that alarm keeps blaring I wish I could turn it off”, you think to yourself, you have to find a way…. You notice something. Through the rubble and debris that covers the ground you notice a PDA, you were supposed to be issue this, before all hell broke loose that is. As you walk down the hallway you read the final message from its owner.
+# “This is dr. phreno, this message is intended for the O-5 council. currently, we believe we are experiencing an xk-class end of the world scenario, we are unsure of the cause, B however from initial reports we are A getting hallucinations, P a need/thirst for blood, H and chanting O to be the initial symptoms. i will continue to examine bodies, and create many more if needed until “his” needs are MET. 
+# You have reached the end of the hallway. You notice 2 doors to your left and right. On your right there is a locked door smeared with deep crimson blood and, what appears to be a guard that may have occupied the room, on your left the door appears that it can be pried open and leads to a dimely lit room. Which will you choose?. The left or right door?
+
 def start_game
      'Hi, you wake up!!! You see the torrent of red light.
      All that fills your head is the sounds of alarms, “CONTAINMENT BREACH, proceed to the nearest exit. “ 
@@ -85,7 +91,43 @@ end
 selection = game_intro player_name
 
 def option_one
-    p 'You are funny'
+    '“I’ve gotta get out of here” you think to yourself
+    You walk into a hallway, the smell of sulfur stings your nostrils. You look forward all you can see is shadow. You look to you left and see a small stack of something you can’t quite see. Do you go left or straight?
+    1. Press one - left
+    2. Press two - straight
+    '.each_char do |value|
+        putc value
+        sleep 0.05
+     end
+
+    next_location = gets.chomp
+
+    if next_location.to_i == 1
+        'You walk down the hallway, 
+        CONTAINMENT BREACH!!!please procced to the nearest exit
+        “Ugh that alarm keeps blaring I wish I could turn it off”, you think to yourself, you have to find a way…. You notice something. Through the rubble and debris that covers the ground you notice a PDA, you were supposed to be issue this, before all hell broke loose that is. As you walk down the hallway you read the final message from its owner.
+        “This is dr. Phreno, this message is intended for the O-5 council. currently, we believe we are experiencing an xk-class end of the world scenario, we are unsure of the cause, B however from initial reports we are A getting hallucinations, P a need/thirst for blood, H and chanting O to be the initial symptoms. i will continue to examine bodies, and create many more if needed until “his” needs are MET. 
+        You have reached the end of the hallway. You notice 2 doors to your left and right. On your right there is a locked door smeared with deep crimson blood and, what appears to be a guard that may have occupied the room, on your left the door appears that it can be pried open and leads to a dimely lit room. Which will you choose?. The left or right door?
+        1. Press one - left
+        2. Press two - straight
+        '.each_char do |value|
+        putc value
+        sleep 0.02
+        end
+
+        
+    end
+
+    if next_location.to_i == 2
+        'You Dead!
+        1. Press one - left
+        2. Press two - straight
+        '.each_char do |value|
+        putc value
+        sleep 0.05
+        end
+        
+    end
 end
 
 def option_two
