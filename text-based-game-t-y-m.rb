@@ -44,7 +44,7 @@
 # [Need some inspiration?]
 # Check out [ Playfic ](http://playfic.com/explore/popular) to see what other people have thought up for text-based game adventures.
 
-# Our story: Escape Game
+# [Our story: Escape Game]
 # You wake up to a torrent of red light.  
 # All that fills your head is the sounds of alarms, “containment breach proceed to the nearest exit. “ 
 # As you, slowly stand up you try to remember you name...
@@ -76,9 +76,9 @@ end
 player_name = start_game
 
 def game_intro name
-    "Welcom to our game, you have two choices,pick one:
+    "Welcom to our game, choose one number to decide your fate:
     1. Option one
-    2. Option two
+    2. Option Two
     Please type the number:".each_char do |value|
     putc value
     sleep 0.05
@@ -100,9 +100,9 @@ def option_one
         sleep 0.05
      end
 
-    next_location = gets.chomp
+    loc1 = gets.chomp
 
-    if next_location.to_i == 1
+    if loc1.to_i == 1
         'You walk down the hallway, 
         CONTAINMENT BREACH!!!please procced to the nearest exit
         “Ugh that alarm keeps blaring I wish I could turn it off”, you think to yourself, you have to find a way…. You notice something. Through the rubble and debris that covers the ground you notice a PDA, you were supposed to be issue this, before all hell broke loose that is. As you walk down the hallway you read the final message from its owner.
@@ -115,18 +115,58 @@ def option_one
         sleep 0.02
         end
 
-        
+        loc2 = gets.chomp
+
+        if loc2.to_i ==1
+            'You walk down the hallway, 
+            CONTAINMENT BREACH!!!please procced to the nearest exit
+            “Ugh that alarm keeps blaring I wish I could turn it off”, you think to yourself, you have to find a way…. You notice something. Through the rubble and debris that covers the ground you notice a PDA, you were supposed to be issue this, before all hell broke loose that is. As you walk down the hallway you read the final message from its owner.
+            “This is dr. Phreno, this message is intended for the O-5 council. currently, we believe we are experiencing an xk-class end of the world scenario, we are unsure of the cause, B however from initial reports we are A getting hallucinations, P a need/thirst for blood, H and chanting O to be the initial symptoms. i will continue to examine bodies, and create many more if needed until “his” needs are MET. 
+            You have reached the end of the hallway. You notice 2 doors to your left and right. On your right there is a locked door smeared with deep crimson blood and, what appears to be a guard that may have occupied the room, on your left the door appears that it can be pried open and leads to a dimely lit room. Which will you choose?. The left or right door?
+            1. Press one - up
+            2. Press two - down
+            '.each_char do |value|
+            putc value
+            sleep 0.02
+            end
+
+            loc3 = gets.chomp
+            if loc3.to_i == 1
+                'You enter the left doorway, almost dreading what will be behind it… “oh an elevator!!’ You exclaim as you jump in and press the up arrow the doors close you sigh, you have lived… so far. As the elevator begins to rise you can only ask yourself what this XK class scenario is and who is Baphomet, and how do you know that name. However right.. blood .. now all you can think about is getting home to your family you can almost see them now.'.each_char do |value|
+                putc value
+                sleep 0.02
+                end
+                p 'You are free yeah!!!!!'
+            end
+
+            if loc3.to_i == 2
+                'As you wait for the elevator you begin to hear voices, they are getting louder, they grow so loud and vile you begin to wonder if they are even your words anymore. He must be sated. You hear a voice behind you. could there be another person here. He must be sated. As they come closer you become more angry, you lounge at them all you see is blood.'.each_char do |value|
+                    putc value
+                    sleep 0.02
+                    end
+                p'You got fire!!'
+            end
+
+        end
+
+        if loc2.to_i == 2
+            'Behind you a you hear wet snap, you look behind you and there is this giant monolith of refuse and blood it has the appearance of a face but you cannot completely make it it, you decide to run, SNAP. SCP 173 snaps your neck like a twig you have died'
+            .each_char do |value|
+                putc value
+                sleep 0.02
+                end
+            p 'you are trapped here forever!!!!'
+        end
     end
 
-    if next_location.to_i == 2
-        'You Dead!
-        1. Press one - left
-        2. Press two - straight
-        '.each_char do |value|
-        putc value
-        sleep 0.05
-        end
-        
+    if loc1.to_i == 2
+        'You decide to wait, however you hear a haunting not in your ear, as a slow rotten withered man slowly trudges into the room. He looks at you, and your heart drops, he comes forward and rests his hand on your while SCP 106 takes you to his dimension for his next meal'.each_char do |value|
+            putc value
+            sleep 0.02
+            end
+        p 'You lost'   
+        sleep 10
+        start_game    
     end
 end
 
